@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">个人记账本</string>
+
+    <string name="ab_tip_cannot_modify_savings">抱歉，余额变更不可以编辑，您可以重新设置余额。</string>
+    <string name="ab_tip_module_developing_wait">功能开发中，尽请期待。</string>
+
+    <string name="ab_title_activity_account_manager">账户管理</string>
+    <string name="ab_title_activity_debit_manager">储蓄卡管理</string>
+    <string name="ab_title_activity_money_transfer">转账信息</string>
+    <string name="ab_label_all_account">所有账户(%d)</string>
+    <string name="ab_label_total_asset">总资产：</string>
+    <string name="ab_menu_add_account">添加账户</string>
+    <string name="ab_menu_transfer_money">转账</string>
+    <string name="ab_label_issue_bank">发卡行</string>
+    <string name="ab_label_account_name">账户名称</string>
+    <string name="ab_label_account_balance">账户余额</string>
+    <string name="ab_label_account_type">账户类型</string>
+    <string name="ab_label_remark">备注</string>
+    <string name="ab_label_transfer_out_account">转出账户</string>
+    <string name="ab_label_transfer_in_account">转入账户</string>
+    <string name="ab_label_transfer_amount">转账金额</string>
+    <string name="ab_label_transfer_date">转账日期</string>
+    <string name="ab_tip_select_issue_bank">请选择发卡行</string>
+    <string name="ab_tip_input_account_name">输入账户名称</string>
+    <string name="ab_tip_input_account_balance">输入账户余额</string>
+    <string name="ab_tip_input_remark">备注说明</string>
+    <string name="ab_tip_transfer_money_success">转账成功</string>
+
+    <string name="ab_label_account_debit_card">储蓄卡</string>
+    <string name="ab_check_account_name_empty">账户名称不能为空</string>
+    <string name="ab_check_error_number_format">请输入正确的数字</string>
+    <string name="ab_check_error_amount_empty">请输入金额</string>
+    <string name="ab_check_error_same_account">同一个账号不能互相转账</string>
+    <string name="ab_tip_operation_fail">操作失败</string>
+    <string name="ab_tip_operation_success">操作成功</string>
+    <string name="ab_label_save">保存</string>
+
+    <string name="ab_bank_boc">中国银行</string>
+    <string name="ab_bank_abc">农业银行</string>
+    <string name="ab_bank_icbc">工商银行</string>
+    <string name="ab_bank_ccb">建设银行</string>
+    <string name="ab_bank_bcm">交通银行</string>
+    <string name="ab_bank_cmb">招商银行</string>
+
+    <string name="ab_text_add_one_record">记一笔</string>
+    <string name="ab_text_total_income">累计收入</string>
+    <string name="ab_text_total_outcome">累计支出</string>
+    <string name="ab_text_closing_income">平账收入</string>
+    <string name="ab_text_closing_outcome">平账支出</string>
+    <string name="ab_text_balance_modify">余额变更</string>
+    <string name="ab_text_transfer_from">%1$s转入</string>
+    <string name="ab_text_transfer_to">转出到%1$s</string>
+
+    <string name="ab_warn_account_not_exist">账户不存在</string>
+</resources>

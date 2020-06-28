@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zq.personal.accountbook">
+
+    <application
+        android:name=".app.AccountApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <meta-data
+            android:name="hwc-theme"
+            android:value="androidhwext:style/Theme.Emui" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.account.AccountManagerActivity"
+            android:label="@string/ab_title_activity_account_manager"/>
+        <activity android:name=".ui.AddRecordActivity"
+            android:exported="false" />
+        <activity android:name=".ui.account.AccountEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.account.DebitCardManagerActivity"
+            android:label="@string/ab_title_activity_debit_manager"
+            android:exported="false" />
+        <activity android:name=".ui.account.AccountHistoryActivity" />
+        <activity android:name=".ui.account.MoneyTransferActivity"
+            android:label="@string/ab_title_activity_money_transfer"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+		<RadioGroup
+	        android:id="@+id/recordTypeGroup"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <RadioButton
+	            android:id="@+id/addOutcomeRecord"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:checked="true"
+	            android:layout_weight="1"
+	            android:text="支出" />
+	
+	        <RadioButton
+	            android:id="@+id/addIncomeRecord"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="收入" />
+	        
+	        <RadioButton
+	            android:id="@+id/savingRecord"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="余额变更" />
+	    </RadioGroup>
+	
+	    <LinearLayout 
+	        android:id="@+id/categoryLayout" 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="20dp"
+	        android:orientation="horizontal" >
+	        <TextView
+		        android:id="@+id/categoryText"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginEnd="20dp"
+		        android:layout_marginTop="20dp"
+		        android:gravity="center_vertical|end"
+		        android:layout_weight="1"
+		        android:text="分类:" />
+	
+		    <Spinner
+		        android:id="@+id/categorySpin"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_marginEnd="40dp"
+		        android:layout_weight="3"
+		        android:entries="@array/outcome_type" />
+		</LinearLayout>
+	
+	    <LinearLayout 
+	        android:id="@+id/dateLayout" 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="20dp"
+	        android:orientation="horizontal" >
+		    <TextView
+		        android:id="@+id/dateText"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginTop="20dp"
+		        android:gravity="center_vertical|right"
+		        android:layout_weight="1"
+		        android:text="日期:" />
+		
+		    <EditText
+		        android:id="@+id/dateEdit"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_marginRight="40dp"
+		        android:layout_weight="3"
+		        android:focusable="false"
+				android:onClick="onDateChanged"
+		        android:ems="10"
+		        android:inputType="date" >
+		    </EditText>
+		</LinearLayout>
+	 
+	    <LinearLayout 
+	        android:id="@+id/moneyLayout" 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="20dp"
+	        android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/moneyText"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginTop="20dp"
+		        android:gravity="center_vertical|right"
+		        android:layout_weight="1"
+		        android:text="金额:" />
+		
+		    <EditText
+		        android:id="@+id/moneyEdit"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_weight="3"
+		        android:layout_marginRight="40dp"
+		        android:ems="10"
+		        android:inputType="numberDecimal" />
+	
+		</LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/accountLayout" 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="20dp"
+	        android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/accountText"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginTop="20dp"
+		        android:layout_weight="1"
+		        android:gravity="center_vertical|right"
+		        android:text="账户:" />
+		
+		    <Spinner
+		        android:id="@+id/accountSpin"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_weight="3"
+		        android:layout_marginEnd="40dp"
+		        android:inputType="text"
+		        android:ems="10" />
+		</LinearLayout>
+	
+	    <LinearLayout 
+	        android:id="@+id/remarkLayout" 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="20dp"
+	        android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/remarkText"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_marginRight="20dp"
+		        android:layout_marginTop="20dp"
+		        android:layout_weight="1"
+		        android:gravity="center_vertical|right"
+		        android:text="备注:" />
+		
+		    <EditText
+		        android:id="@+id/remarkEdit"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="3"
+		        android:layout_marginRight="40dp"
+		        android:singleLine="true"
+		        android:inputType="text"
+		        android:ems="10" />
+	    </LinearLayout>
+	</LinearLayout>
+
+	<!-- 底部按钮 -->
+    <LinearLayout 
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        
+	    <Button
+	        android:id="@+id/confirmBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+			android:onClick="saveRecord"
+	        android:text="保存" />
+	    
+	    <Button
+	        android:id="@+id/deleteBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+			android:onClick="deleteRecord"
+	        android:text="删除" />
+	</LinearLayout>
+ 	
+</RelativeLayout>

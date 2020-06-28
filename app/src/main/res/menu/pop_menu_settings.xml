@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_add_account"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/ab_menu_add_account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_item_transfer_money"
+        android:title="@string/ab_menu_transfer_money"
+        app:showAsAction="never" />
+</menu>

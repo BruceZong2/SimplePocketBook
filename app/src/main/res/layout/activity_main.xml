@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    tools:context=".ui.MainActivity" >
+    
+    <TextView 
+        android:id="@+id/mainTitle"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:background="#ffff00"
+        android:text="@string/app_name" />
+
+	<RelativeLayout
+	    android:id="@+id/main_top"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/mainTitle"
+	    android:background="#5AC6EA" >
+
+	    <TextView
+	        android:id="@+id/dateSelector"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#fff"
+	        android:text="2018年6月\u25BC"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+	        android:onClick="onDateSelector"
+	        android:textSize="16sp" />
+
+	    <TextView
+	        android:id="@+id/chartBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:text="报表"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="10dp"
+	        android:onClick="onChartReport"
+	        android:textSize="16sp"
+	        android:textColor="#fff" />
+
+	    <TextView
+	        android:id="@+id/textIncome"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/dateSelector"
+	        android:layout_below="@+id/chartBtn"
+	        android:layout_marginTop="14dp"
+	        android:textColor="#fff"
+	        android:gravity="center_horizontal"
+	        android:text="收入（元）" />
+
+	    <TextView
+	        android:id="@+id/texOutcome"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textIncome"
+	        android:layout_alignBottom="@+id/textIncome"
+	        android:layout_centerHorizontal="true"
+	        android:textColor="#fff"
+	        android:gravity="center_horizontal"
+	        android:text="支出（元）" />
+
+	    <TextView
+	        android:id="@+id/texSavings"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/texOutcome"
+	        android:layout_alignBottom="@+id/texOutcome"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="19dp"
+	        android:textColor="#fff"
+	        android:gravity="center_horizontal"
+	        android:text="结余（元）" />
+
+	    <TextView
+	        android:id="@+id/textIncomeMoney"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/textIncome"
+	        android:layout_below="@+id/textIncome"
+	        android:layout_marginTop="6dp"
+	        android:paddingBottom="10dp"
+	        android:textColor="#fff"
+	        android:textSize="14sp"
+	        android:textStyle="bold"
+	        android:gravity="center_horizontal"
+	        android:text="200" />
+
+	    <TextView
+	        android:id="@+id/textOutcomeMoney"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textIncomeMoney"
+	        android:layout_alignBottom="@+id/textIncomeMoney"
+	        android:layout_alignLeft="@+id/texOutcome"
+	        android:textColor="#fff"
+	        android:textSize="14sp"
+	        android:textStyle="bold"
+	        android:gravity="center_horizontal"
+	        android:text="1,000,000" />
+
+	    <TextView
+	        android:id="@+id/textSavingMoney"
+	        android:layout_width="100dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textOutcomeMoney"
+	        android:layout_alignBottom="@+id/textOutcomeMoney"
+	        android:layout_alignLeft="@+id/texSavings"
+	        android:textColor="#fff"
+	        android:textSize="14sp"
+	        android:textStyle="bold"
+	        android:gravity="center_horizontal"
+	        android:text="-999,800" />
+
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:id="@+id/mainBtnLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="horizontal" >
+		<Button
+		    android:id="@+id/accountDetailBtn"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:onClick="onAccountDetail"
+		    android:text="账户" />
+	
+		<Button
+		    android:id="@+id/addNewBtn"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="3"
+		    android:onClick="onAddNewRecord"
+		    android:text="记一笔" />
+	</LinearLayout>
+	
+</RelativeLayout>

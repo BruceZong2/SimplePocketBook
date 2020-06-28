@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+	<ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/common_margin_12dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toEndOf="@+id/icon"
+		android:layout_marginStart="@dimen/common_margin_6dp"
+		android:orientation="vertical"
+		android:layout_centerVertical="true">
+		<TextView
+		android:id="@+id/category"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:textSize="14sp"
+		android:text="伙食" />
+		<TextView
+			android:id="@+id/remark"
+			android:layout_width="160dp"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/common_margin_2dp"
+			android:singleLine="true"
+			android:textColor="#888"
+			android:text="备注" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/ll_amount_and_date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_marginEnd="12dp"
+		android:orientation="vertical"
+		android:layout_centerVertical="true">
+		<TextView
+			android:id="@+id/money"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="12dp"
+			android:text="金额" />
+		<TextView
+			android:id="@+id/date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/common_margin_2dp"
+			android:text="日期" />
+	</LinearLayout>
+
+	<TextView
+	    android:id="@+id/accountType"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+		android:layout_marginEnd="@dimen/common_margin_12dp"
+		android:layout_toStartOf="@+id/ll_amount_and_date"
+	    android:text="账户类型" />
+
+</RelativeLayout>

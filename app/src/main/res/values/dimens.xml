@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="common_margin_2dp">2dp</dimen>
+    <dimen name="common_margin_6dp">6dp</dimen>
+    <dimen name="common_margin_12dp">12dp</dimen>
+
+    <dimen name="common_padding_6dp">6dp</dimen>
+    <dimen name="common_padding_12dp">12dp</dimen>
+</resources>
